@@ -1,0 +1,13 @@
+*.tex
+*.aux
+*.log
+*.toc
+*.bbl
+*.bcf
+*.blg
+*.fls
+*.out
+main.run.xml
+main.fdb_latexmk
+main.pdf
+pic/*-eps-converted-to.pdf

@@ -1,0 +1,132 @@
+\documentclass[a4paper,12pt]{report}
+\usepackage[english,czech]{babel} 
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc} 
+\usepackage{multirow}
+\usepackage[pdftex,
+            pdfauthor={Jméno Příjmení},
+            pdftitle={Název práce},
+            pdfsubject={Diplomová práce, KDAIZ FJFI ČVUT},
+            pdfkeywords={},
+            unicode
+]{hyperref}
+\usepackage[pdftex]{graphicx}
+\usepackage[section]{placeins}
+\usepackage{rotating}
+\usepackage{mathrsfs}
+\usepackage{textcomp}
+\usepackage{footmisc} 
+\usepackage{array}
+\usepackage{amsmath}
+\usepackage{indentfirst}
+\usepackage{caption} 
+\usepackage{booktabs}
+\usepackage[version=4]{mhchem}
+\usepackage{mathtools}
+\captionsetup[table]{skip=10pt}
+\usepackage{calc}
+\usepackage{siunitx}
+\usepackage{listings}
+\usepackage{pdfpages}
+\usepackage{subcaption}
+\sisetup{
+  output-decimal-marker = {,}
+}
+\usepackage{csquotes}
+\usepackage[backend=biber,style=iso-numeric,sortlocale=cs_CZ,autolang=other,backref=true,shortnumeration]{biblatex}
+% BibLaTeX export ze Zotera
+\addbibresource{literatura.bib}
+\usepackage{url}
+\usepackage{pdflscape}
+% \usepackage{rotating}
+
+% ToDoNotes
+\setlength {\marginparwidth }{2cm}
+\usepackage[colorinlistoftodos]{todonotes}
+\newcommand{\ks}[1]{\todo[color=yellow!40]{#1}}
+\newcommand{\ksi}[1]{\todo[inline,color=yellow!40]{#1}}
+\newcommand{\mse}[1]{\todo[color=orange!40]{#1}}
+\newcommand{\msei}[1]{\todo[inline,color=orange!40]{#1}}
+\newcommand{\vs}[1]{\todo[color=green!20]{#1}}
+\newcommand{\vsi}[1]{\todo[inline,color=green!20]{#1}}
+\newcommand{\fix}[1]{\colorbox{yellow}{#1}}
+\newcommand\tab[1][0.1cm]{\hspace*{#1}}
+
+\clubpenalty9996
+\widowpenalty10000
+
+% Page margins
+\oddsidemargin=10mm   
+\topmargin=-15mm      
+\textwidth=150mm      
+\textheight=240mm     
+
+\pagenumbering{arabic}
+\pagestyle{plain}
+
+\parindent=15pt
+\parskip=4pt
+\frenchspacing
+
+% Makra pro české uvozovky:
+\def\bq{\mbox{\kern.1ex\protect\raisebox{-1.3ex}[0pt][0pt]{''}\kern-.1ex}}
+\def\eq{\mbox{\kern-.1ex``\kern.1ex}}
+\def\ifundefined#1{\expandafter\ifx\csname#1\endcsname\relax }%
+\ifundefined{uv}%
+        \gdef\uv#1{\bq #1\eq}
+\fi
+% Použití makra pro psaní českých uvozovek: \uv{text uvnitř uvozovek}
+
+\newcommand{\cvut}{ČESKÉ VYSOKÉ UČENÍ TECHNICKÉ V~PRAZE}
+\newcommand{\fjfi}{Fakulta jaderná a fyzikální inženýrská}
+\newcommand{\kdaiz}{Katedra dozimetrie a aplikace ionizujícího záření}
+\newcommand{\obor}{Radiologická fyzika}
+
+\newcommand{\nazeven}{Title in English}        
+\newcommand{\nazevcz}{Název práce v češtině}     
+\newcommand{\autor}{Bc. Jméno Příjmení}           
+\newcommand{\rok}{2020/2021}               
+\newcommand{\vedouci}{Ing. A B, Ph.D.}      
+\newcommand{\konzultantka}{Ing. X Y, Ph.D.}
+\newcommand{\pracoviste}{ODZ ÚJF AV~ČR, v.\,v.\,i., Na~Truhlářce~39/64, 180\,00 Praha~8} 
+\newcommand{\klicova}{klíčová slova v češtině, oddělená čárkou}
+\newcommand{\keyword}{comma separated list of keywords in English}
+     
+\newcommand{\abstrCZ}{
+Abstrakt v češtině. Krátký textový souhrn práce bez odkazů na literaturu, bez obrázků, formátování, tabulek.
+} 
+
+\newcommand{\abstrEN}{
+\begin{otherlanguage}{english}%%
+Short English summary of the work.
+%%
+\end{otherlanguage}
+}
+
+\title{\nazevcz}
+\begin{document}
+
+% Přejmenování popisků
+\renewcommand{\figurename}{Obr.}
+\renewcommand{\lstlistingname}{Výpis}
+\renewcommand{\tablename}{Tab.}
+
+\input{prvnistrany}
+
+\tableofcontents
+
+\newpage
+\include{uvod}
+\include{teorie}
+\include{metody}
+\include{vysledky}
+\include{diskuze}
+\include{zaver}
+
+\addcontentsline{toc}{chapter}{Literatura}
+\printbibliography
+
+%\listoftables
+%\listoffigures
+\end{document} 
+
