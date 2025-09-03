@@ -4,15 +4,12 @@
 \usepackage[utf8]{inputenc} 
 \usepackage{multirow}
 \usepackage[pdftex,
-            pdfauthor={Jméno Příjmení},
-            pdftitle={Název práce},
-            pdfsubject={Závěrečná práce, KDAIZ FJFI ČVUT},
-            pdfkeywords={},
             unicode
 ]{hyperref}
 \usepackage[pdftex]{graphicx}
 % Images are in img subdir of dir containing main.tex
 \graphicspath{ {./img/} }
+
 
 \usepackage[section]{placeins}
 \usepackage{rotating}
@@ -95,7 +92,7 @@
 \newcommand{\pracoviste}{KDAIZ FJFI ČVUT v Praze, Břehová 7, 115\,19, Praha~1} 
 \newcommand{\pracovistek}{ODZ ÚJF AV~ČR, v.\,v.\,i., Na~Truhlářce~39/64, 180\,00 Praha~8} 
 \newcommand{\klicova}{klíčová slova v češtině, oddělená čárkou}
-\newcommand{\keyword}{comma separated list of keywords in English}
+\newcommand{\keywords}{comma separated list of keywords in English}
      
 \newcommand{\abstrCZ}{
 Abstrakt v češtině. Krátký textový souhrn práce bez odkazů na literaturu, bez obrázků, formátování, tabulek.
@@ -106,6 +103,14 @@ Abstrakt v češtině. Krátký textový souhrn práce bez odkazů na literaturu
 Short English summary of the work.
 %%
 \end{otherlanguage}
+}
+
+% Fill the metadata
+\hypersetup{
+  pdftitle = {\nazevcz},
+  pdfauthor = {\autor},
+  pdfkeywords = {\keywords},
+  pdfsubject = {\typprace, KDAIZ FJFI ČVUT v Praze}
 }
 
 \title{\nazevcz}
