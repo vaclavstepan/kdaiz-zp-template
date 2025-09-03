@@ -10,4 +10,5 @@
 main.run.xml
 main.fdb_latexmk
 main.pdf
+main.xdv
 pic/*-eps-converted-to.pdf
