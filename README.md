@@ -1,6 +1,7 @@
 # README
 
 Šablona pro závěrečné práce (BP/VÚ/DP) na KDAIZ FJFI ČVUT, k volnému použití.
+Příklad výstupu viz [main.pdf](main.pdf)
 
 Pro překlad v TeXlive budete chtít spustit ``xelatex main`` nebo ``latexmk -pdfxe main``.
 
