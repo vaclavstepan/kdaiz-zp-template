@@ -1,4 +1,13 @@
-\documentclass[a4paper,12pt]{report}
+% Finální výstup
+\documentclass[12pt]{report}
+\usepackage[a4paper]{geometry}
+
+% Nebo to možná budete chtít číst na tabletu, takže místo toho:
+%\documentclass{report}
+%\usepackage[a5paper, margin=0.5cm]{geometry}
+
+% Note: Compile with xelatex
+
 \usepackage[english,czech]{babel} 
 \usepackage[utf8]{inputenc} 
 \usepackage{multirow}
@@ -38,25 +47,25 @@
 % \usepackage{rotating}
 
 % ToDoNotes
-\setlength {\marginparwidth }{2cm}
+%\setlength {\marginparwidth }{2cm}
 \usepackage[colorinlistoftodos]{todonotes}
-\newcommand{\ks}[1]{\todo[color=yellow!40]{#1}}
-\newcommand{\ksi}[1]{\todo[inline,color=yellow!40]{#1}}
-\newcommand{\mse}[1]{\todo[color=orange!40]{#1}}
-\newcommand{\msei}[1]{\todo[inline,color=orange!40]{#1}}
-\newcommand{\vs}[1]{\todo[color=green!20]{#1}}
-\newcommand{\vsi}[1]{\todo[inline,color=green!20]{#1}}
+%\newcommand{\ks}[1]{\todo[color=yellow!40]{#1}}
+%\newcommand{\ksi}[1]{\todo[inline,color=yellow!40]{#1}}
+%\newcommand{\mse}[1]{\todo[color=orange!40]{#1}}
+%\newcommand{\msei}[1]{\todo[inline,color=orange!40]{#1}}
+%\newcommand{\vs}[1]{\todo[color=green!20]{#1}}
+%\newcommand{\vsi}[1]{\todo[inline,color=green!20]{#1}}
 \newcommand{\fix}[1]{\colorbox{yellow}{#1}}
 \newcommand\tab[1][0.1cm]{\hspace*{#1}}
 
 \clubpenalty9996
 \widowpenalty10000
 
-% Page margins
-\oddsidemargin=10mm   
-\topmargin=-15mm      
-\textwidth=150mm      
-\textheight=240mm     
+% Let's keep page margins almost as per default
+%\oddsidemargin=10mm   
+%\topmargin=-15mm      
+%\textwidth=150mm      
+%\textheight=240mm     
 
 \pagenumbering{arabic}
 \pagestyle{plain}
