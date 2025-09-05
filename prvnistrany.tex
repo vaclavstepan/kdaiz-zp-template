@@ -76,39 +76,28 @@ Tento výzkum byl podpořen \dots
 \newpage
 \thispagestyle{empty}
 
-{
-	\setlength{\parindent}{0pt}
-	
-	\textit{Název práce:}
-	\textbf{\nazevcz} \\
-	
-	\textit{Autor:} \autor \\
-	
-	\textit{Obor:} \obor \\
-	
-	\textit{Druh práce:} \typprace \\
-	
-	\textit{Vedoucí práce:}  \vedouci, \pracoviste \\
-	
-	\textit{Konzultant:}  \konzultant, \pracovistek \\ 
-	
-	\textit{Abstrakt:} 
-	\abstrCZ \\
-	
-	\textit{Klíčová slova:}  \klicova
-}
+\begingroup
+\renewcommand{\arraystretch}{1.5}
+\begin{tabularx}{\textwidth}{>{\raggedleft\arraybackslash}p{3.2cm} >{\raggedright\arraybackslash}X}
+\textit{Název práce:}     & \textbf{\nazevcz} \\
+\textit{Autor:}           & \autor \\
+\textit{Obor:}            & \obor \\
+\textit{Druh práce:}      & \typprace \\
+\textit{Vedoucí práce:}   & \vedouci, \pracoviste \\
+\textit{Konzultant:}      & \konzultant, \pracovistek \\
+\textit{Klíčová slova:}   & \klicova \\
+\textit{Abstrakt:}        & \abstrCZ \\
+\end{tabularx}
+\endgroup
 
 \newpage
 \thispagestyle{empty}
-{
-	\setlength{\parindent}{0pt}
-\textit{Title:}
-\textbf{\nazeven} \\
-
-\textit{Author:} \autor \\
-
-\textit{Abstract:} 
-\abstrEN \\
-
-\textit{Keywords:}  \keywords
-}
+\begingroup
+\renewcommand{\arraystretch}{1.5}
+\begin{tabularx}{\textwidth}{>{\raggedleft\arraybackslash}p{3.2cm} >{\raggedright\arraybackslash}X}
+\textit{Title:}           & \textbf{\nazeven} \\
+\textit{Author:}          & \autor \\
+\textit{Keywords:}        & \keywords \\
+\textit{Abstract:}        & \foreignlanguage{english}{\abstrEN}\\
+\end{tabularx}
+\endgroup
